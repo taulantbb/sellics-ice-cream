@@ -1,0 +1,209 @@
+footer.site-footer{
+    .bottom-content{
+        background-image: url('./../img/colored-bg.png');
+        background-repeat: no-repeat;
+        .delivery-now{
+            padding: 54px 0 107px;
+            h4{
+                font-size: 36px;
+                color: #ff0062;
+                font-family: $baseFont;
+                margin: 0;
+                font-weight: 400;
+            }
+            p{
+                font-size: 20px;
+                line-height: 32px;
+                color: #000000;
+                font-family: $baseFont
+            }
+            @include md{
+                padding: 0;
+            }
+        }
+        .ice-cream-form{
+            form{
+                background: #fff;
+                padding: 50px 30px;
+                width: 511px;
+                border-radius: 20px;
+                filter: drop-shadow(5.142px 6.128px 5px rgba(0,0,0,0.16));
+                background-color: #ffffff;
+                position: absolute;
+                top: -90px;
+                @include md{
+                    position: unset;
+                    width: 100%;
+                }
+                label{
+                    font-size: 20px;
+                    color: #5ba5c6;
+                    font-weight: 500;
+                    font-family: "Futura";
+                }
+                input[type=text],
+                input[type=email],
+                input[type=number]{
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    border-color: #d9d9d9;
+                    height: 50px;
+                    margin-bottom: 40px;
+                    width: 100%;
+                    &:focus{
+                        outline: 0;
+                    }
+                }
+                .first-step.remove{
+                    visibility: hidden;
+                    position: absolute;
+                }
+                .submit-form{
+                    top: 0;
+                    right: -100%;
+                    position: absolute;
+                    visibility: hidden;
+                    overflow-y: scroll;
+                    transition: all .3s ease-in-out;
+                    &.next{
+                        right: 0;
+                        visibility: visible;
+                        transform: translateX(0);
+                        position: unset;
+
+                    }
+                    &>label{
+                        margin-bottom:40px ;
+                    }
+                }
+
+                input[type=radio]{
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    padding: 2px;
+                    background-clip: content-box;
+                    border: 2px solid #d9d9d9;
+                    border-radius: 50%;
+                    &:checked{
+                        background-image: radial-gradient(circle at center, #8ecbe5 0%, #1ea1c1 100%);
+                    }
+                    &:focus{
+                        outline:none;
+                    }
+                }
+                button{
+                    width: 260px;
+                    height: 60px;
+                    border-radius: 30px;
+                    background-color: #b6d7ff;
+                    font-size: 25px;
+                    color: #ffffff;
+                    font-weight: 500;
+                    font-family: "Futura";
+                    border: 0;
+                    &:hover{
+                        background-color: rgba(#6eb8d0, 0.2);
+                        color: #5e9ede;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+                .radio-buttons{
+                    height: 125px; 
+                    overflow-y: scroll;  
+                    overflow-x: hidden; 
+                    margin-bottom: 40px;
+                    &::-webkit-scrollbar-track {
+                        border: 1px solid #959595;
+                        padding: 2px 0;
+                        border-radius: 20px;
+                        
+                    }
+                    &::-webkit-scrollbar {
+                        width: 9px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-image: linear-gradient(270deg, #64afcf 0%, #a2fff8 100%);
+                        border: 1px solid #959595;
+                        border-radius: 20px;
+                    }
+                    
+                }
+                .err{
+                    display: none;
+                    color: red;
+                }
+            }
+        }
+    }
+    .bottom-footer{
+        color: #fff;
+        position: relative;
+        z-index: -1;
+        background-color: #be59d6;
+        .ice-creams{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 115px;
+            img{
+                width: 15%;
+                position: relative;
+                margin-right: 30px;
+                &.pink-ice-cream{
+                    // top: -56px;
+                    animation:MoveUpDownPink 2s ease-out 0s alternate infinite none running
+                }
+                &.yellow-ice-cream{
+                    // top: 15px;
+                    animation:MoveUpDownYellow 2s ease-out 0s alternate infinite none running
+                }
+                &.blue-ice-cream{
+                    // top: -30px;
+                    animation:MoveUpDownPink 2s ease-out 0s alternate infinite none running
+                }
+                &.pink-ice-cream-2{
+                    animation:MoveUpDownYellow 2s ease-out 0s alternate infinite none running
+                }
+                &.yellow-ice-cream-2{
+                    animation:MoveUpDownPink 2s ease-out 0s alternate infinite none running
+                }
+                &.blue-ice-cream-2{
+                    animation:MoveUpDownYellow 2s ease-out 0s alternate infinite none running
+                }
+            }
+        }
+        .copyright{
+            text-align: left;
+            font-size: 20px;
+            line-height: 32px;
+            color: #ffffff;
+            font-family: $baseFont;
+            margin-bottom: 20px;
+        }
+        @include md{
+            margin-top: 100px;
+        }
+    }
+}
+@keyframes MoveUpDownPink {
+    from {
+        transform: translateY(-56px);
+    }
+    to { 
+        transform: translateY(50px);
+    }
+}
+@keyframes MoveUpDownYellow {
+    from {
+        transform: translateY(40px);
+    }
+    to { 
+        transform: translateY(-56px);
+    }
+}

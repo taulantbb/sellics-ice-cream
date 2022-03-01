@@ -1,0 +1,88 @@
+.home{
+    .site-container{
+        background-image: url('./../img/background-hero.png');
+        background-repeat: no-repeat;
+        .homepage-hero{
+            .hero-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1{
+                    font-size: 54px;
+                    line-height: 80px;
+                    color: #535353;
+                    font-family: $baseFont
+                }
+                input{
+                    height: 62px;
+                    border-radius: 31px;
+                    filter: drop-shadow(0px 10px 11.5px rgba(0,0,0,0.16));
+                    background-color: #ffffff;
+                    font-size: 24px;
+                    border: 1px solid #ddd;
+                    width: 100%;
+                    padding: 1px 100px 1px 15px;
+                    &::placeholder{
+                        color: #aeaeae;
+                        font-size: 24px;
+                        line-height: 80px;
+                        font-family: "Palatino";
+                        padding-left: 20px;
+                    }
+                    &:focus{
+                        outline: 0;
+                    }
+                }
+                button{
+                    font-family: Helvetica;
+                    font-size: 17px;
+                    position: absolute;
+                    right: 17px;
+                    width: 294px;
+                    margin: 4px;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: 25px;
+                    background-image: linear-gradient(104deg,#f9b6d0 0,#ef6ac0 100%);
+                    padding: 15px 30px;
+                    border: 0;
+                    @include md{
+                        width: 210px;
+                    }
+                }
+                img{
+                    margin-top: -70px;
+                    @include md{
+                        margin: 0;
+                    }
+                }
+                @include md{
+                    flex-direction: column;
+                }
+            }
+        }
+        .homepage-content{
+            padding: 100px 0 200px;
+            .ice-cream{
+                margin: 0 70px;
+                p{
+                    margin-top: 30px;
+                    font-size: 20px;
+                    line-height: 32px;
+                    color: #000000;
+                    font-family: $baseFont
+                }
+                &:first-child{
+                    margin: 0 70px 0 0;
+                }
+                &:last-child{
+                    margin: 0 0 0 70px;
+                }
+                @include md{
+                    margin: 40px 15px !important;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

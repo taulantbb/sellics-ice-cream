@@ -1,0 +1,23 @@
+
+@import "custom/mixins"; 
+@import "custom/variables"; 
+@import "custom/libs/bootstrap-grid"; 
+@import "custom/layouts/header";
+@import "custom/templates/front-page"; 
+@import "custom/layouts/footer";
+
+// Body global
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html{
+    overflow-x:hidden;
+	body {
+		overflow-x:hidden;
+		font-family: $baseFont;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+	}
+}
