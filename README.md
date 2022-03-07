@@ -15,4 +15,5 @@ I have used genesis theme as parent theme and create a child theme(sellic-theme)
 and dev, all the js, css and images I worked on dev and using gulp will automatically move the same changes to app dir.
 Inside of layout folder you can find partials as footer and header. On shortocde folder I have used the shortode to create the main bottom form. 
 
+You can find the duplicator package on this link: https://drive.google.com/file/d/1usycMkGFNlkPz8NdDC0pL8qraIVIfbqq/view
 
